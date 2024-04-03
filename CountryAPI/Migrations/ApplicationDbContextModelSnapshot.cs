@@ -57,6 +57,26 @@ namespace CountryAPI.Migrations
 
                     b.ToTable("Countries");
                 });
+
+            modelBuilder.Entity("CountryAPI.Model.State", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CountryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StateName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("States");
+                });
 #pragma warning restore 612, 618
         }
     }

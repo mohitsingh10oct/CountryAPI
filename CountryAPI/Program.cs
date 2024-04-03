@@ -29,6 +29,9 @@ builder.Services.AddScoped<ICountrieservice, Countrieservice>();
 builder.Services.AddScoped<ICountryRepository, CountryRepository>();
 builder.Services.AddScoped<ICityService, CityService>();
 builder.Services.AddScoped<ICityRepository, CityRepository>();
+builder.Services.AddScoped<IStateService, StateService>();
+builder.Services.AddScoped<IStateRepository, StateRepository>();
+
 
 
 var app = builder.Build();
