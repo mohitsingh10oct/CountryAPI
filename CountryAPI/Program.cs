@@ -27,6 +27,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ICountrieservice, Countrieservice>();
 builder.Services.AddScoped<ICountryRepository, CountryRepository>();
+builder.Services.AddScoped<ICityService, CityService>();
+builder.Services.AddScoped<ICityRepository, CityRepository>();
 
 
 var app = builder.Build();
